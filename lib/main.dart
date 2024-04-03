@@ -1,3 +1,4 @@
+import 'package:first_app/start_screen.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -9,12 +10,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(colorSchemeSeed: Colors.deepPurple),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text("Hi there!"),
-        ),
+      home: const Scaffold(
+        backgroundColor: Colors.deepPurple,
+        body: StartScreen(),
       ),
     );
   }
