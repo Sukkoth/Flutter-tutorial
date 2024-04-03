@@ -1,4 +1,3 @@
-import 'package:first_app/gradient_container.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -13,7 +12,9 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: GradientContainer(),
+        body: Center(
+          child: Text("Hi there!"),
+        ),
       ),
     );
   }
