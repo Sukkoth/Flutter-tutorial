@@ -1,55 +1,64 @@
-import 'package:first_app/models/quiz_question.dart';
+import 'package:first_app/models/question.dart';
 
-List<QuizQuestion> questions = [
-  QuizQuestion(
-    'What are the main building blocks of Flutter UIs?',
-    [
-      'Widgets',
-      'Components',
-      'Blocks',
-      'Functions',
-    ],
-  ),
-  QuizQuestion('How are Flutter UIs built?', [
-    'By combining widgets in code',
-    'By combining widgets in a visual editor',
-    'By defining widgets in config files',
-    'By using XCode for iOS and Android Studio for Android',
+List<Question> questions = [
+  Question(
+      text: "Which metal is liquid at room temperature?",
+      options: ["Mercury", "Gold", "Iron", "Copper"]),
+  Question(
+      text: "What is the capital city of France?",
+      options: ["Paris", "London", "Rome", "Berlin"]),
+  Question(text: "Who discovered the theory of relativity?", options: [
+    "Albert Einstein",
+    "Isaac Newton",
+    "Stephen Hawking",
+    "Galileo Galilei"
   ]),
-  QuizQuestion(
-    'What\'s the purpose of a StatefulWidget?',
-    [
-      'Update UI as data changes',
-      'Update data as UI changes',
-      'Ignore data changes',
-      'Render UI that does not depend on data',
-    ],
-  ),
-  QuizQuestion(
-    'Which widget should you try to use more often: StatelessWidget or StatefulWidget?',
-    [
-      'StatelessWidget',
-      'StatefulWidget',
-      'Both are equally good',
-      'None of the above',
-    ],
-  ),
-  QuizQuestion(
-    'What happens if you change data in a StatelessWidget?',
-    [
-      'The UI is not updated',
-      'The UI is updated',
-      'The closest StatefulWidget is updated',
-      'Any nested StatefulWidgets are updated',
-    ],
-  ),
-  QuizQuestion(
-    'How should you update data inside of StatefulWidgets?',
-    [
-      'By calling setState()',
-      'By calling updateData()',
-      'By calling updateUI()',
-      'By calling updateState()',
-    ],
-  ),
+  Question(
+      text: "Which gas do plants primarily use for photosynthesis?",
+      options: ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"]),
+  Question(
+      text: "Which mammal lays eggs?",
+      options: ["Platypus", "Dog", "Cat", "Elephant"]),
+  Question(
+      text: "What is the tallest mammal?",
+      options: ["Giraffe", "Elephant", "Hippopotamus", "Rhino"]),
+  Question(text: "Who painted the Mona Lisa?", options: [
+    "Leonardo da Vinci",
+    "Pablo Picasso",
+    "Vincent van Gogh",
+    "Michelangelo"
+  ]),
+  Question(
+      text: "Which country is famous for the Great Wall?",
+      options: ["China", "India", "Japan", "Brazil"]),
+  Question(
+      text: "What is the chemical symbol for gold?",
+      options: ["Au", "Ag", "Fe", "Cu"]),
+  Question(text: "Who is known as the father of modern physics?", options: [
+    "Albert Einstein",
+    "Galileo Galilei",
+    "Isaac Newton",
+    "Nikola Tesla"
+  ]),
+  Question(
+      text: "What is the largest ocean in the world?",
+      options: ["Pacific", "Atlantic", "Indian", "Arctic"]),
+  Question(text: "Who wrote 'Romeo and Juliet'?", options: [
+    "William Shakespeare",
+    "Jane Austen",
+    "Charles Dickens",
+    "Mark Twain"
+  ]),
+  Question(
+      text: "What is the capital city of Japan?",
+      options: ["Tokyo", "Beijing", "Seoul", "Bangkok"]),
+  Question(
+      text: "What is the chemical symbol for water?",
+      options: ["H2O", "CO2", "NaCl", "O2"]),
+  Question(text: "Who invented the telephone?", options: [
+    "Alexander Graham Bell",
+    "Thomas Edison",
+    "Nikola Tesla",
+    "Guglielmo Marconi"
+  ])
 ];
