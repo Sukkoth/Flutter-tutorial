@@ -17,8 +17,27 @@ class ResultsPage extends StatelessWidget {
       required this.onHomepage,
       required this.onPlayAgain});
 
+  int get getPercent {
+    return ((totalAnswered / totalQuestions) * 100).toInt();
+  }
+
+  String get getTrophy {
+    final int percent = getPercent;
+
+    if (percent >= 80) {
+      return 'gold';
+    } else if (percent >= 60) {
+      return 'silver';
+    } else if (percent >= 40) {
+      return 'bronze';
+    } else {
+      return 'sad';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    debugPrint("🚀🚀 $getTrophy");
     return Scaffold(
       backgroundColor: primaryColor,
       body: Center(
@@ -42,7 +61,7 @@ class ResultsPage extends StatelessWidget {
                 height: 20,
               ),
               Image.asset(
-                'assets/images/trophy-star.png',
+                'assets/images/$getTrophy.png',
                 width: 150,
               ),
               const SizedBox(

@@ -37,7 +37,7 @@ class StartBanner extends StatelessWidget {
                       "Challenge your friends",
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 20,
+                          fontSize: 22,
                           fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(
@@ -45,9 +45,8 @@ class StartBanner extends StatelessWidget {
                     ),
                     Text(
                       "Invite your friends to play quiz game",
-                      style: TextStyle(
-                        color: Colors.grey.shade500,
-                      ),
+                      style:
+                          TextStyle(color: Colors.grey.shade500, fontSize: 16),
                     ),
                     const SizedBox(
                       height: 15,
@@ -57,6 +56,9 @@ class StartBanner extends StatelessWidget {
                         onStartQuiz();
                       },
                       style: const ButtonStyle(
+                          padding: MaterialStatePropertyAll(
+                              EdgeInsets.symmetric(
+                                  horizontal: 30, vertical: 13)),
                           backgroundColor:
                               MaterialStatePropertyAll(Colors.white)),
                       child: const Text(
@@ -72,9 +74,9 @@ class StartBanner extends StatelessWidget {
         ),
         Positioned(
             top: 0,
-            bottom: 0,
+            bottom: -20,
             left: 0,
-            right: 0,
+            right: -20,
             child: Align(
               alignment: Alignment.bottomRight,
               child: Image.asset(

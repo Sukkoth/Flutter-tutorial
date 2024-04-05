@@ -4,3 +4,13 @@ class Question {
 
   Question({required this.text, required this.options});
 }
+
+enum QuestionType {
+  sports,
+  astronomy,
+  christianity,
+  history,
+  math,
+  coding,
+  random
+}
