@@ -37,7 +37,6 @@ class ResultsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint("🚀🚀 $getTrophy");
     return Scaffold(
       backgroundColor: primaryColor,
       body: Center(
