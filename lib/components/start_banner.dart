@@ -20,22 +20,30 @@ class StartBanner extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('QUIZZ',
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.acme(
-                        color: Colors.white,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 5)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15),
+                      child: Text('QUIZZ',
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.pangolin(
+                              color: Colors.white,
+                              fontSize: 35,
+                              fontWeight: FontWeight.w900,
+                              letterSpacing: 5)),
+                    )
+                  ],
+                ),
                 const SizedBox(
-                  height: 60,
+                  height: 50,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       "Challenge your friends",
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 22,
                           fontWeight: FontWeight.bold),
@@ -45,8 +53,8 @@ class StartBanner extends StatelessWidget {
                     ),
                     Text(
                       "Invite your friends to play quiz game",
-                      style:
-                          TextStyle(color: Colors.grey.shade500, fontSize: 16),
+                      style: GoogleFonts.poppins(
+                          color: Colors.grey.shade500, fontSize: 14),
                     ),
                     const SizedBox(
                       height: 15,
@@ -58,12 +66,27 @@ class StartBanner extends StatelessWidget {
                       style: const ButtonStyle(
                           padding: MaterialStatePropertyAll(
                               EdgeInsets.symmetric(
-                                  horizontal: 30, vertical: 13)),
+                                  horizontal: 20, vertical: 12)),
                           backgroundColor:
                               MaterialStatePropertyAll(Colors.white)),
-                      child: const Text(
-                        "Start Now",
-                        style: TextStyle(color: Colors.black),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            "Start Now",
+                            style: GoogleFonts.poppins(
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black,
+                                fontSize: 16),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          const Icon(
+                            Icons.arrow_right_alt,
+                            color: Colors.black,
+                          )
+                        ],
                       ),
                     )
                   ],
@@ -74,14 +97,14 @@ class StartBanner extends StatelessWidget {
         ),
         Positioned(
             top: 0,
-            bottom: -20,
+            bottom: -70,
             left: 0,
-            right: -20,
+            right: -70,
             child: Align(
               alignment: Alignment.bottomRight,
               child: Image.asset(
-                'assets/images/home-banner.png',
-                width: 220,
+                'assets/images/home-banner-2.png',
+                width: 250,
               ),
             )),
       ],

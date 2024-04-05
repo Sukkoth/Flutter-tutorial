@@ -13,7 +13,7 @@ class QuestionHeader extends StatelessWidget {
       children: [
         Text(
           "Question $current of $total",
-          style: TextStyle(color: Colors.grey.shade600),
+          style: TextStyle(color: primaryColor),
         ),
         Stack(
           children: [

@@ -52,7 +52,7 @@ class ResultsPage extends StatelessWidget {
             children: [
               Text(
                 "Results",
-                style: GoogleFonts.truculenta(
+                style: GoogleFonts.pangolin(
                     fontSize: 30,
                     fontWeight: FontWeight.w900,
                     letterSpacing: 3),

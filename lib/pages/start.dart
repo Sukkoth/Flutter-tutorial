@@ -48,48 +48,56 @@ class StartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: bgColor,
+      backgroundColor: primaryColor,
       body: SafeArea(
         child: Column(
           children: [
             StartBanner(onStartQuiz: onStartQuiz),
             Center(
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          "Explore Quizes",
-                          style: GoogleFonts.poppins(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: primaryColor),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    SizedBox(
-                      height: screenSize.height - 420,
-                      child: GridView(
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 2,
-                                crossAxisSpacing: 20,
-                                mainAxisSpacing: 20),
-                        children: types
-                            .map((item) => ExploreQuizTile(
-                                setType: setquestionType,
-                                type: item['type'],
-                                text: item['text'],
-                                icon: item['icon']))
-                            .toList(),
+              child: Container(
+                decoration: BoxDecoration(
+                    color: bgColor,
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(45),
+                    )),
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                      top: 40, bottom: 20.0, right: 20, left: 20),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            "Explore Quizes",
+                            style: GoogleFonts.poppins(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: primaryColor),
+                          ),
+                        ],
                       ),
-                    )
-                  ],
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      SizedBox(
+                        height: screenSize.height - 434,
+                        child: GridView(
+                          gridDelegate:
+                              const SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 2,
+                                  crossAxisSpacing: 20,
+                                  mainAxisSpacing: 20),
+                          children: types
+                              .map((item) => ExploreQuizTile(
+                                  setType: setquestionType,
+                                  type: item['type'],
+                                  text: item['text'],
+                                  icon: item['icon']))
+                              .toList(),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             )

@@ -52,7 +52,6 @@ class _QuestionsPageState extends State<QuestionsPage> {
       widget.selectedAnswers.add(answer);
     }
     if (questionIndex >= questions.length - 1) {
-      debugPrint("🚀🚀 Finish question $questionIndex ${questions.length}");
       widget.setPage('results');
     } else {
       setState(() {
@@ -80,7 +79,6 @@ class _QuestionsPageState extends State<QuestionsPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Players(),
-                Text("${widget.questionType}"),
                 QuestionHeader(
                     total: questions.length, current: questionIndex + 1),
                 const SizedBox(
@@ -89,7 +87,7 @@ class _QuestionsPageState extends State<QuestionsPage> {
                 Text(
                   questions[questionIndex].text,
                   style: GoogleFonts.poppins(
-                      fontSize: 28,
+                      fontSize: 22,
                       fontWeight: FontWeight.bold,
                       color: primaryColor),
                 ),
@@ -115,8 +113,10 @@ class _QuestionsPageState extends State<QuestionsPage> {
                         ? "Finish"
                         : "Next",
                     onClick: () {
-                      onNext(questions[questionIndex]
-                          .options[selectedOptionIndex!]);
+                      if (selectedOptionIndex != null) {
+                        onNext(questions[questionIndex]
+                            .options[selectedOptionIndex!]);
+                      }
                     })
               ],
             ),
