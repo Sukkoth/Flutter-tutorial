@@ -1,3 +1,4 @@
+import 'package:first_app/widgets/expenses.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -9,13 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(useMaterial3: true),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text("Hi there!"),
-        ),
-      ),
+      home: const Expenses(),
     );
   }
 }
