@@ -1,0 +1,41 @@
+import 'package:first_app/constants.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class CartItemDetails extends StatelessWidget {
+  const CartItemDetails({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Casual T-Shirt',
+          style: GoogleFonts.poppins(
+              color: MyColors.textMain,
+              fontSize: 15,
+              fontWeight: FontWeight.w600),
+        ),
+        Text(
+          'Women Style',
+          style: GoogleFonts.poppins(
+            color: MyColors.greyText,
+            // fontSize: 1,
+          ),
+        ),
+        const SizedBox(
+          height: 30,
+        ),
+        Text(
+          '\$${150}',
+          style: GoogleFonts.poppins(
+              color: MyColors.textMain,
+              fontSize: 22,
+              fontWeight: FontWeight.w600),
+        )
+      ],
+    );
+  }
+}

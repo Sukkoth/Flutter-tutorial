@@ -1,4 +1,7 @@
+import 'package:first_app/constants.dart';
+import 'package:first_app/pages/index.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -9,13 +12,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: MyColors.light, // Set status bar color
+    ));
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text("Hi there!"),
-        ),
-      ),
+      home: IndexPage(),
     );
   }
 }
