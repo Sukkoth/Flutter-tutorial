@@ -15,7 +15,7 @@ class DetailsPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ProductDetailImage(imageUrl: item.imageUrl),
+            ProductDetailImage(product: item),
             const SizedBox(
               height: 30,
             ),
@@ -35,7 +35,7 @@ class DetailsPage extends StatelessWidget {
                   const SizedBox(
                     height: 25,
                   ),
-                  const ProductDetailButtons()
+                  ProductDetailButtons(item)
                 ],
               ),
             )

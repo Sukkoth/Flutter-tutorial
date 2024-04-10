@@ -1,7 +1,7 @@
 import 'package:first_app/constants.dart';
 import 'package:first_app/pages/cart_page.dart';
 import 'package:first_app/pages/home_page.dart';
-import 'package:first_app/pages/list.dart';
+import 'package:first_app/pages/favourites_page.dart';
 import 'package:first_app/pages/profile_dart.dart';
 import 'package:first_app/widgets/bottomNav/bottom_nav.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +23,7 @@ class _IndexPageState extends State<IndexPage> {
 
   List pages = [
     const HomePage(),
-    const ListPage(),
+    const FavouritesPage(),
     const CartPage(),
     const ProfilePage()
   ];

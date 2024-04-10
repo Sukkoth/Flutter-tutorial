@@ -1,12 +1,16 @@
 import 'package:first_app/constants.dart';
+import 'package:first_app/controllers/favourite_controller.dart';
+import 'package:first_app/models/product.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ProductDetailImage extends StatelessWidget {
-  final String imageUrl;
-  const ProductDetailImage({super.key, required this.imageUrl});
+  final Product product;
+  const ProductDetailImage({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
+    FavouriteController controller = Get.find<FavouriteController>();
     return Stack(
       children: [
         Container(
@@ -32,7 +36,7 @@ class ProductDetailImage extends StatelessWidget {
               bottomRight: Radius.circular(35),
             ),
             child: Image.asset(
-              'assets/images/$imageUrl',
+              'assets/images/${product.imageUrl}',
               fit: BoxFit.cover,
             ),
           ),
@@ -62,19 +66,30 @@ class ProductDetailImage extends StatelessWidget {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
-                  child: Container(
-                    padding: const EdgeInsets.all(5),
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.white),
-                    child: Center(
-                      child: Icon(
-                        Icons.favorite_outline,
-                        size: 17,
-                        color: MyColors.primary,
+                  onTap: () {
+                    controller.isInFavourites(product)
+                        ? controller.removeFromFavourites(product)
+                        : controller.addToFavourites(product);
+                  },
+                  child: GetBuilder<FavouriteController>(builder: (_) {
+                    return Container(
+                      padding: const EdgeInsets.all(2),
+                      decoration: BoxDecoration(
+                          border: Border.fromBorderSide(
+                              BorderSide(width: 1, color: MyColors.primary)),
+                          shape: BoxShape.circle,
+                          color: Colors.white),
+                      child: Center(
+                        child: Icon(
+                          !controller.isInFavourites(product)
+                              ? Icons.favorite_outline
+                              : Icons.favorite,
+                          size: 14,
+                          color: MyColors.primary,
+                        ),
                       ),
-                    ),
-                  ),
+                    );
+                  }),
                 )
               ],
             ))
