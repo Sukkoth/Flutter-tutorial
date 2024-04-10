@@ -32,6 +32,7 @@ class _IndexPageState extends State<IndexPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.light,
+      drawer: const Drawer(),
       bottomNavigationBar: BottomNav(
         activeIndex: activeIndex,
         onPressed: onChangePage,

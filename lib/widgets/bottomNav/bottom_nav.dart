@@ -31,7 +31,7 @@ class BottomNav extends StatelessWidget {
             isActive: activeIndex == 0,
           ),
           NavButton(
-            icon: Icons.light_sharp,
+            icon: Icons.favorite_rounded,
             onPress: () {
               onPressed(1);
             },

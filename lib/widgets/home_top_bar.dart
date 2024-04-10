@@ -14,14 +14,20 @@ class HomeTopBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-              padding: const EdgeInsets.all(10),
-              decoration: const BoxDecoration(
-                  shape: BoxShape.circle, color: Colors.white),
-              child: Center(
-                child: Icon(
-                  Icons.dashboard,
-                  color: MyColors.primary,
+            GestureDetector(
+              onTap: () {
+                debugPrint("🚀🚀 clicked");
+                Scaffold.of(context).openDrawer();
+              },
+              child: Container(
+                padding: const EdgeInsets.all(10),
+                decoration: const BoxDecoration(
+                    shape: BoxShape.circle, color: Colors.white),
+                child: Center(
+                  child: Icon(
+                    Icons.dashboard,
+                    color: MyColors.primary,
+                  ),
                 ),
               ),
             ),
