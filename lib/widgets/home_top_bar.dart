@@ -16,7 +16,6 @@ class HomeTopBar extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
-                debugPrint("🚀🚀 clicked");
                 Scaffold.of(context).openDrawer();
               },
               child: Container(
