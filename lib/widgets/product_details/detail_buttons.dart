@@ -5,6 +5,7 @@ import 'package:first_app/models/product.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:toastification/toastification.dart';
 
 class ProductDetailButtons extends StatelessWidget {
   const ProductDetailButtons(this.product, {super.key});
@@ -37,9 +38,34 @@ class ProductDetailButtons extends StatelessWidget {
         GetBuilder<CartController>(builder: (_) {
           return GestureDetector(
             onTap: () {
-              controller.isInCart(product)
-                  ? controller.removeFromCartByProduct(product)
-                  : controller.addToCart(Cart(product: product));
+              if (controller.isInCart(product)) {
+                controller.removeFromCartByProduct(product);
+                toastification.show(
+                  context: context,
+                  type: ToastificationType.error,
+                  style: ToastificationStyle.flat,
+                  title: const Text("Cart"),
+                  description: const Text("Item removed to cart"),
+                  alignment: Alignment.topRight,
+                  autoCloseDuration: const Duration(seconds: 2),
+                  primaryColor: Colors.red,
+                  showProgressBar: false,
+                  borderRadius: BorderRadius.circular(12.0),
+                );
+              } else {
+                controller.addToCart(Cart(product: product));
+                toastification.show(
+                    context: context,
+                    type: ToastificationType.success,
+                    style: ToastificationStyle.flat,
+                    title: const Text("Cart"),
+                    description: const Text("Item added to cart"),
+                    alignment: Alignment.topRight,
+                    autoCloseDuration: const Duration(seconds: 2),
+                    primaryColor: const Color(0xffff1493),
+                    borderRadius: BorderRadius.circular(12.0),
+                    showProgressBar: false);
+              }
             },
             child: Container(
               height: 80,
