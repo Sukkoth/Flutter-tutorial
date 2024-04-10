@@ -1,7 +1,7 @@
-import 'package:first_app/models/product.dart';
-import 'package:first_app/widgets/product_details/detail_buttons.dart';
-import 'package:first_app/widgets/product_details/detail_header.dart';
-import 'package:first_app/widgets/product_details/image.dart';
+import 'package:fashion/models/product.dart';
+import 'package:fashion/widgets/product_details/detail_buttons.dart';
+import 'package:fashion/widgets/product_details/detail_header.dart';
+import 'package:fashion/widgets/product_details/image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

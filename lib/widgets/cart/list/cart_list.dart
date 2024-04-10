@@ -1,6 +1,6 @@
-import 'package:first_app/controllers/cart_controller.dart';
-import 'package:first_app/widgets/cart/empty_message.dart';
-import 'package:first_app/widgets/cart/list/cart_item.dart';
+import 'package:fashion/controllers/cart_controller.dart';
+import 'package:fashion/widgets/cart/empty_message.dart';
+import 'package:fashion/widgets/cart/list/cart_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

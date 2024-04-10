@@ -1,7 +1,7 @@
-import 'package:first_app/constants.dart';
-import 'package:first_app/controllers/cart_controller.dart';
-import 'package:first_app/models/cart.dart';
-import 'package:first_app/models/product.dart';
+import 'package:fashion/constants.dart';
+import 'package:fashion/controllers/cart_controller.dart';
+import 'package:fashion/models/cart.dart';
+import 'package:fashion/models/product.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';

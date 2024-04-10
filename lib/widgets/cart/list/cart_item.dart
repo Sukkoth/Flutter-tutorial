@@ -1,6 +1,6 @@
-import 'package:first_app/models/cart.dart';
-import 'package:first_app/widgets/cart/list/item_buttons.dart';
-import 'package:first_app/widgets/cart/list/item_details.dart';
+import 'package:fashion/models/cart.dart';
+import 'package:fashion/widgets/cart/list/item_buttons.dart';
+import 'package:fashion/widgets/cart/list/item_details.dart';
 import 'package:flutter/material.dart';
 
 class CartItem extends StatelessWidget {

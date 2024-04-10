@@ -1,9 +1,9 @@
-import 'package:first_app/controllers/cart_controller.dart';
-import 'package:first_app/widgets/product/products_list.dart';
-import 'package:first_app/widgets/home_banner.dart';
-import 'package:first_app/widgets/home_filters.dart';
-import 'package:first_app/widgets/home_search_bar.dart';
-import 'package:first_app/widgets/home_top_bar.dart';
+import 'package:fashion/controllers/cart_controller.dart';
+import 'package:fashion/widgets/product/products_list.dart';
+import 'package:fashion/widgets/home_banner.dart';
+import 'package:fashion/widgets/home_filters.dart';
+import 'package:fashion/widgets/home_search_bar.dart';
+import 'package:fashion/widgets/home_top_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

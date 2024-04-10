@@ -1,6 +1,6 @@
-import 'package:first_app/controllers/favourite_controller.dart';
-import 'package:first_app/controllers/product_controller.dart';
-import 'package:first_app/widgets/product/product_item.dart';
+import 'package:fashion/controllers/favourite_controller.dart';
+import 'package:fashion/controllers/product_controller.dart';
+import 'package:fashion/widgets/product/product_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,6 +1,6 @@
-import 'package:first_app/controllers/favourite_controller.dart';
-import 'package:first_app/widgets/favourites/empty_message.dart';
-import 'package:first_app/widgets/favourites/favourite_item.dart';
+import 'package:fashion/controllers/favourite_controller.dart';
+import 'package:fashion/widgets/favourites/empty_message.dart';
+import 'package:fashion/widgets/favourites/favourite_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

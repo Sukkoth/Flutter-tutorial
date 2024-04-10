@@ -1,4 +1,4 @@
-import 'package:first_app/models/product.dart';
+import 'package:fashion/models/product.dart';
 
 class SampleData {
   static List<Product> products = [

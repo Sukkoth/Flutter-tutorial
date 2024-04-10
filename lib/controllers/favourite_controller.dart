@@ -1,4 +1,4 @@
-import 'package:first_app/models/product.dart';
+import 'package:fashion/models/product.dart';
 import 'package:get/get.dart';
 
 class FavouriteController extends GetxController {

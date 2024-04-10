@@ -1,5 +1,5 @@
-import 'package:first_app/models/cart.dart';
-import 'package:first_app/models/product.dart';
+import 'package:fashion/models/cart.dart';
+import 'package:fashion/models/product.dart';
 import 'package:get/get.dart';
 
 class CartController extends GetxController {

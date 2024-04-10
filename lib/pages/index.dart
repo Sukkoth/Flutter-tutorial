@@ -1,9 +1,9 @@
-import 'package:first_app/constants.dart';
-import 'package:first_app/pages/cart_page.dart';
-import 'package:first_app/pages/home_page.dart';
-import 'package:first_app/pages/favourites_page.dart';
-import 'package:first_app/pages/profile_dart.dart';
-import 'package:first_app/widgets/bottomNav/bottom_nav.dart';
+import 'package:fashion/constants.dart';
+import 'package:fashion/pages/cart_page.dart';
+import 'package:fashion/pages/home_page.dart';
+import 'package:fashion/pages/favourites_page.dart';
+import 'package:fashion/pages/profile_dart.dart';
+import 'package:fashion/widgets/bottomNav/bottom_nav.dart';
 import 'package:flutter/material.dart';
 
 class IndexPage extends StatefulWidget {

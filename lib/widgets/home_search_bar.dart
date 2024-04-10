@@ -1,4 +1,4 @@
-import 'package:first_app/constants.dart';
+import 'package:fashion/constants.dart';
 import 'package:flutter/material.dart';
 
 class HomeSearchBar extends StatelessWidget {

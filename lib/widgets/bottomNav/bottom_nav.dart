@@ -1,5 +1,5 @@
-import 'package:first_app/constants.dart';
-import 'package:first_app/widgets/bottomNav/nav_button.dart';
+import 'package:fashion/constants.dart';
+import 'package:fashion/widgets/bottomNav/nav_button.dart';
 import 'package:flutter/material.dart';
 
 class BottomNav extends StatelessWidget {

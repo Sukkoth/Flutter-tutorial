@@ -1,5 +1,5 @@
-import 'package:first_app/constants.dart';
-import 'package:first_app/pages/index.dart';
+import 'package:fashion/constants.dart';
+import 'package:fashion/pages/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
