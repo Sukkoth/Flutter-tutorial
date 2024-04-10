@@ -37,7 +37,7 @@ class CartItemButtons extends StatelessWidget {
                     },
                     child: Text(
                       "Cancel",
-                      style: GoogleFonts.poppins(),
+                      style: GoogleFonts.poppins(color: MyColors.grey),
                     )),
                 TextButton(
                     onPressed: () {
@@ -46,7 +46,7 @@ class CartItemButtons extends StatelessWidget {
                     },
                     child: Text(
                       "Yes",
-                      style: GoogleFonts.poppins(),
+                      style: GoogleFonts.poppins(color: MyColors.textMain),
                     ))
               ],
             );
