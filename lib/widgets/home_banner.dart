@@ -7,28 +7,20 @@ class HomeBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.max,
+    return Stack(
       children: [
-        const SizedBox(
-          height: 35,
-        ),
         Container(
+          width: double.maxFinite,
+          margin: const EdgeInsets.only(top: 40),
           padding: const EdgeInsets.all(10),
-          height: 200,
+          height: 180,
           decoration: BoxDecoration(
               gradient: MyColors.primaryGradient,
               borderRadius: BorderRadius.circular(35)),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Image.asset(
-                'assets/images/banner_img.png',
-                // height: 250,
-                width: 150,
-                fit: BoxFit.cover,
-              ),
-              Expanded(
-                  child: Column(
+              Column(
                 children: [
                   Text(
                     "Big Sale",
@@ -49,10 +41,24 @@ class HomeBanner extends StatelessWidget {
                     ),
                   )
                 ],
-              ))
+              ),
             ],
           ),
         ),
+        Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Image.asset(
+                'assets/images/banner_img.png',
+                width: 180,
+                height: 220,
+                fit: BoxFit.cover,
+              ),
+            ))
       ],
     );
   }
