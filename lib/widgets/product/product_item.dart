@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class FashionItem extends StatelessWidget {
+class ProductItem extends StatelessWidget {
   final Product item;
-  const FashionItem({super.key, required this.item});
+  const ProductItem({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {

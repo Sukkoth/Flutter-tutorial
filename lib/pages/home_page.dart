@@ -1,5 +1,5 @@
 import 'package:first_app/controllers/cart_controller.dart';
-import 'package:first_app/widgets/fashions/fashions_list.dart';
+import 'package:first_app/widgets/product/products_list.dart';
 import 'package:first_app/widgets/home_banner.dart';
 import 'package:first_app/widgets/home_filters.dart';
 import 'package:first_app/widgets/home_search_bar.dart';
@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            const FashionList(),
+            const ProductsList(),
           ],
         ),
       ),

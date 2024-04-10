@@ -1,11 +1,11 @@
 import 'package:first_app/controllers/favourite_controller.dart';
 import 'package:first_app/controllers/product_controller.dart';
-import 'package:first_app/widgets/fashions/fashion_item.dart';
+import 'package:first_app/widgets/product/product_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class FashionList extends StatelessWidget {
-  const FashionList({super.key});
+class ProductsList extends StatelessWidget {
+  const ProductsList({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class FashionList extends StatelessWidget {
             mainAxisExtent: 350,
           ),
           itemBuilder: (context, index) {
-            return FashionItem(
+            return ProductItem(
               item: productController.products[index],
             );
           });
